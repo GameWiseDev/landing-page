@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none">
+  <!-- Radar táctico original de GAMEWISE (no es un mapa real de CS2) -->
+  <g stroke="#2A3344" stroke-width="3" stroke-linejoin="round" fill="#151B26">
+    <!-- spawns -->
+    <path d="M70 770h250v170H70z"/>
+    <path d="M700 70h230v160H700z"/>
+    <!-- sitio A -->
+    <path d="M110 110h300v120h-60v110H230v-60H110z"/>
+    <!-- sitio B -->
+    <path d="M620 610h310v290H720V780h-100z"/>
+    <!-- medio -->
+    <path d="M430 400h150v250H430z"/>
+    <path d="M470 270h90v130h-90z"/>
+    <!-- pasillos -->
+    <path d="M170 280h60v490h-60z"/>
+    <path d="M320 800h170v60H320z"/>
+    <path d="M490 650h60v210h-60z"/>
+    <path d="M580 480h260v60H580z"/>
+    <path d="M410 150h290v60H410z"/>
+    <path d="M800 230h60v380h-60z"/>
+    <path d="M230 470h200v60H230z"/>
+    <path d="M550 860h170v40H550z"/>
+  </g>
+  <!-- cajas y coberturas -->
+  <g fill="#222B3A">
+    <path d="M150 140h40v40h-40zM300 150h50v30h-50zM260 280h40v40h-40z"/>
+    <path d="M660 640h50v40h-50zM850 660h50v50h-50zM760 820h60v40h-60z"/>
+    <path d="M480 520h40v40h-40z"/>
+  </g>
+  <!-- rutas punteadas -->
+  <g stroke="#12BEF2" stroke-opacity=".35" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round">
+    <path d="M200 850V500h300V300"/>
+    <path d="M400 830h120V560h300V680"/>
+  </g>
+  <!-- etiquetas -->
+  <g font-family="Barlow Semi Condensed, Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="260" y="200" font-size="72" fill="#12BEF2" fill-opacity=".55">A</text>
+    <text x="800" y="720" font-size="72" fill="#12BEF2" fill-opacity=".55">B</text>
+    <text x="195" y="870" font-size="34" fill="#3A4558">T</text>
+    <text x="815" y="165" font-size="34" fill="#3A4558">CT</text>
+  </g>
+  <g fill="#12BEF2">
+    <circle cx="505" cy="535" r="7" fill-opacity=".7"/>
+    <circle cx="505" cy="535" r="20" fill-opacity=".12"/>
+  </g>
+</svg>

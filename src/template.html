@@ -23,16 +23,8 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <!-- Íconos (decorativos: siempre van con texto al lado) -->
-  <svg class="sprite" width="0" height="0" aria-hidden="true">
-    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
-    <symbol id="i-trophy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 4h8v5a4 4 0 0 1-8 0V4zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/></symbol>
-    <symbol id="i-memory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4M12 8v4l3 2"/></symbol>
-    <symbol id="i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 12h12"/></symbol>
-    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></g></symbol>
-  </svg>
+  <!-- Íconos: Font Awesome Free (CC BY 4.0), decorativos; siempre van con texto al lado -->
+{{icon_sprite}}
 
   <a class="skip" href="#contenido">{{skip}}</a>
 
@@ -64,7 +56,7 @@
   <main id="contenido">
 
     <!-- ===== Hero ===== -->
-    <section class="hero">
+    <section class="hero has-radar">
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <h1>{{hero_title}}</h1>
@@ -81,7 +73,7 @@
           </div>
           <ul class="hero__note">
             <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{hero_note_free}}</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{hero_note_steam}}</li>
+            <li><svg aria-hidden="true"><use href="#i-steam"/></svg>{{hero_note_steam}}</li>
           </ul>
         </div>
 
@@ -160,7 +152,7 @@
     </section>
 
     <!-- ===== Ciclo de mejora ===== -->
-    <section class="section" id="como-funciona" aria-labelledby="ciclo-titulo">
+    <section class="section band has-radar radar--b" id="como-funciona" aria-labelledby="ciclo-titulo">
       <div class="wrap">
         <div class="section__head">
           <h2 id="ciclo-titulo">{{loop_title}}</h2>
@@ -168,12 +160,12 @@
         </div>
         <!-- El orden importa: es un ciclo, por eso los pasos van numerados -->
         <ol class="loop">
-          <li><span class="num">01</span><h3>{{loop1_t}}</h3><p>{{loop1_d}}</p></li>
-          <li><span class="num">02</span><h3>{{loop2_t}}</h3><p>{{loop2_d}}</p></li>
-          <li><span class="num">03</span><h3>{{loop3_t}}</h3><p>{{loop3_d}}</p></li>
-          <li><span class="num">04</span><h3>{{loop4_t}}</h3><p>{{loop4_d}}</p></li>
-          <li><span class="num">05</span><h3>{{loop5_t}}</h3><p>{{loop5_d}}</p></li>
-          <li class="loop__last"><span class="num">06</span><h3>{{loop6_t}}</h3><p>{{loop6_d}}</p></li>
+          <li><span class="loop__node"><svg aria-hidden="true"><use href="#i-bullseye"/></svg></span><span class="num">01</span><h3>{{loop1_t}}</h3><p>{{loop1_d}}</p></li>
+          <li><span class="loop__node"><svg aria-hidden="true"><use href="#i-analysis"/></svg></span><span class="num">02</span><h3>{{loop2_t}}</h3><p>{{loop2_d}}</p></li>
+          <li><span class="loop__node"><svg aria-hidden="true"><use href="#i-list"/></svg></span><span class="num">03</span><h3>{{loop3_t}}</h3><p>{{loop3_d}}</p></li>
+          <li><span class="loop__node"><svg aria-hidden="true"><use href="#i-crosshairs"/></svg></span><span class="num">04</span><h3>{{loop4_t}}</h3><p>{{loop4_d}}</p></li>
+          <li><span class="loop__node"><svg aria-hidden="true"><use href="#i-chart"/></svg></span><span class="num">05</span><h3>{{loop5_t}}</h3><p>{{loop5_d}}</p></li>
+          <li class="loop__last"><span class="loop__node"><svg aria-hidden="true"><use href="#i-next"/></svg></span><span class="num">06</span><h3>{{loop6_t}}</h3><p>{{loop6_d}}</p></li>
         </ol>
         <p class="loop-note"><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>{{loop_note_b}}</b> {{loop_note}}</span></p>
       </div>
@@ -193,10 +185,6 @@
             <div class="feature__text">
               <h3>{{f1_title}}</h3>
               <p>{{f1_text}}</p>
-              <ul>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f1_b1}}</li>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f1_b2}}</li>
-              </ul>
             </div>
             <div class="panel">
               <div class="panel__head"><p class="label">{{f1_panel}}</p><span class="example">{{example}}</span></div>
@@ -214,10 +202,6 @@
             <div class="feature__text">
               <h3>{{f2_title}}</h3>
               <p>{{f2_text}}</p>
-              <ul>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f2_b1}}</li>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f2_b2}}</li>
-              </ul>
             </div>
             <div class="panel">
               <div class="panel__head"><p class="label">{{coach}}</p><span class="example">{{example}}</span></div>
@@ -235,10 +219,6 @@
             <div class="feature__text">
               <h3>{{f3_title}}</h3>
               <p>{{f3_text}}</p>
-              <ul>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f3_b1}}</li>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f3_b2}}</li>
-              </ul>
             </div>
             <div class="panel">
               <div class="panel__head"><p class="label">{{f3_panel}}</p><span class="example">{{example}}</span></div>
@@ -259,10 +239,6 @@
             <div class="feature__text">
               <h3>{{f4_title}}</h3>
               <p>{{f4_text}}</p>
-              <ul>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f4_b1}}</li>
-                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f4_b2}}</li>
-              </ul>
             </div>
             <div class="panel" role="img" aria-label="{{f4_aria}}">
               <div class="panel__head"><p class="label">{{f4_panel}}</p><span class="example">{{example}}</span></div>
@@ -352,7 +328,7 @@
     </section>
 
     <!-- ===== CTA final ===== -->
-    <section class="section final" aria-labelledby="final-titulo">
+    <section class="section final has-radar radar--b" aria-labelledby="final-titulo">
       <div class="wrap">
         <h2 id="final-titulo">{{final_title}}</h2>
         <p class="lead">{{final_lead}}</p>

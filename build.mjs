@@ -31,6 +31,24 @@ rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 cpSync('public', OUT, { recursive: true });
 
+// Íconos de Font Awesome Free (src/icons) → un solo sprite en línea
+const ICONS = {
+  check: 'check', arrow: 'arrow-right', play: 'play', trophy: 'trophy', memory: 'clock-rotate-left',
+  minus: 'minus', globe: 'globe', bullseye: 'bullseye', analysis: 'magnifying-glass-chart',
+  list: 'list-check', crosshairs: 'crosshairs', chart: 'chart-line', next: 'rotate-right', steam: 'steam',
+};
+const iconSprite = [
+  '  <svg class="sprite" width="0" height="0" aria-hidden="true">',
+  '    <!-- Font Awesome Free by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0) -->',
+  ...Object.entries(ICONS).map(([id, file]) => {
+    const svg = readFileSync(`src/icons/${file}.svg`, 'utf8');
+    const viewBox = svg.match(/viewBox="([^"]+)"/)[1];
+    const paths = svg.replace(/<!--[\s\S]*?-->/g, '').match(/<path[^>]*\/>/g).join('');
+    return `    <symbol id="i-${id}" viewBox="${viewBox}" fill="currentColor">${paths.replace(/\s*fill="[^"]*"/g, '')}</symbol>`;
+  }),
+  '  </svg>',
+].join('\n');
+
 const used = new Set();
 for (const lang of LANGS) {
   const langLinks = LANGS.map((l) => {
@@ -45,6 +63,7 @@ for (const lang of LANGS) {
     page_url: `${SITE_URL}/${lang}/`,
     hreflang_links: hreflangLinks,
     lang_links: langLinks,
+    icon_sprite: iconSprite,
   };
 
   const html = template.replace(/\{\{(\w+)\}\}/g, (_, key) => {

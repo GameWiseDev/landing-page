@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none">
+  <!-- Radar táctico original de GAMEWISE (no es un mapa real de CS2) -->
+  <g stroke="#2A3344" stroke-width="3" stroke-linejoin="round" fill="#151B26">
+    <path d="M400 820h220v130H400z"/>
+    <path d="M390 50h240v130H390z"/>
+    <path d="M80 330h270v280H250v-80h-70v80H80z"/>
+    <path d="M660 300h260v170h-80v130H660z"/>
+    <path d="M460 180h100v170H460z"/>
+    <path d="M420 350h180v200H420z"/>
+    <path d="M480 550h60v270h-60z"/>
+    <path d="M350 420h70v60h-70z"/>
+    <path d="M600 400h60v60h-60z"/>
+    <path d="M180 610h70v270h150v60H180z"/>
+    <path d="M620 880h220V600h-80v220H620z"/>
+    <path d="M250 100h140v60H310v170h-60z"/>
+  </g>
+  <g fill="#222B3A">
+    <path d="M110 360h50v40h-50zM280 360h40v60h-40z"/>
+    <path d="M700 330h40v40h-40zM860 380h40v50h-40z"/>
+    <path d="M490 420h40v40h-40z"/>
+  </g>
+  <g stroke="#12BEF2" stroke-opacity=".3" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round">
+    <path d="M510 880V450H215V560"/>
+  </g>
+  <g font-family="Barlow Semi Condensed, Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="215" y="470" font-size="72" fill="#12BEF2" fill-opacity=".5">A</text>
+    <text x="790" y="410" font-size="72" fill="#12BEF2" fill-opacity=".5">B</text>
+    <text x="510" y="900" font-size="34" fill="#3A4558">T</text>
+    <text x="510" y="130" font-size="34" fill="#3A4558">CT</text>
+  </g>
+</svg>
