@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="{{html_lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <meta name="theme-color" content="#0F1219">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="canonical" href="{{page_url}}">
+{{hreflang_links}}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{og_title}}">
+  <meta property="og:description" content="{{og_description}}">
+  <meta property="og:image" content="{{site_url}}/assets/og-{{lang}}.png">
+  <meta property="og:url" content="{{page_url}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/assets/fonts/barlow-semi-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Íconos (decorativos: siempre van con texto al lado) -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 4h8v5a4 4 0 0 1-8 0V4zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20h7M10 17h4"/></symbol>
+    <symbol id="i-memory" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4M12 8v4l3 2"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 12h12"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></g></symbol>
+  </svg>
+
+  <a class="skip" href="#contenido">{{skip}}</a>
+
+  <!-- ===== Barra superior ===== -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="/{{lang}}/" aria-label="{{brand_home}}">
+        <img src="/assets/gamewise-emblem.webp" alt="" width="36" height="36">
+        <span>GAMEWISE</span>
+      </a>
+      <nav class="nav" aria-label="{{nav_label}}">
+        <a href="#como-funciona">{{nav_how}}</a>
+        <a href="#que-te-muestra">{{nav_what}}</a>
+        <a href="#planes">{{nav_plans}}</a>
+        <a href="#preguntas">{{nav_faq}}</a>
+      </nav>
+      <div class="lang" role="group" aria-label="{{lang_label}}">
+        <svg class="lang__icon" aria-hidden="true"><use href="#i-globe"/></svg>
+{{lang_links}}
+      </div>
+      <div class="topbar__cta">
+        <!-- Los enlaces con data-app toman la dirección de APP_URL en main.js -->
+        <a class="btn btn--secondary btn--sm topbar__login" data-app data-cta="nav-entrar" href="https://gamewise-frontend.vercel.app/login">{{nav_login}}</a>
+        <a class="btn btn--primary btn--sm" data-app data-cta="nav-probar" href="https://gamewise-frontend.vercel.app/login">{{nav_try}}</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <h1>{{hero_title}}</h1>
+          <p class="lead">{{hero_lead}}</p>
+          <div class="actions">
+            <a class="btn btn--primary btn--lg" data-app data-cta="hero-probar" href="https://gamewise-frontend.vercel.app/login">
+              {{cta_try}}
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--secondary btn--lg" data-app data-cta="hero-demo" href="https://gamewise-frontend.vercel.app/">
+              <svg aria-hidden="true"><use href="#i-play"/></svg>
+              {{cta_demo}}
+            </a>
+          </div>
+          <ul class="hero__note">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{hero_note_free}}</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{hero_note_steam}}</li>
+          </ul>
+        </div>
+
+        <!-- Marcador de ejemplo: las últimas 10 partidas con el patrón marcado -->
+        <figure class="board" aria-label="{{board_aria}}">
+          <div class="board__head">
+            <div>
+              <p class="label">{{board_label}}</p>
+              <p class="board__pattern">{{pattern_name}}</p>
+            </div>
+            <div class="board__count">
+              <b class="num">7<span>/10</span></b>
+              <span>{{board_count}}</span>
+            </div>
+          </div>
+          <table class="board__table">
+            <thead>
+              <tr><th scope="col">{{col_map}}</th><th scope="col">{{col_result}}</th><th scope="col">{{pattern_name}}</th></tr>
+            </thead>
+            <tbody>
+              <tr class="hit"><td><i>Mirage</i></td><td class="num win">13–9 <small>{{win}}</small></td><td><span class="flag">2 {{rounds}}</span></td></tr>
+              <tr class="hit"><td><i>Inferno</i></td><td class="num loss">11–13 <small>{{loss}}</small></td><td><span class="flag">4 {{rounds}}</span></td></tr>
+              <tr><td><i>Ancient</i></td><td class="num win">13–7 <small>{{win}}</small></td><td><span class="none">—</span></td></tr>
+              <tr class="hit"><td><i>Nuke</i></td><td class="num loss">8–13 <small>{{loss}}</small></td><td><span class="flag">5 {{rounds}}</span></td></tr>
+              <tr class="hit"><td><i>Anubis</i></td><td class="num win">13–11 <small>{{win}}</small></td><td><span class="flag">2 {{rounds}}</span></td></tr>
+              <tr class="hit"><td><i>Dust II</i></td><td class="num loss">10–13 <small>{{loss}}</small></td><td><span class="flag">3 {{rounds}}</span></td></tr>
+              <tr><td><i>Mirage</i></td><td class="num win">13–6 <small>{{win}}</small></td><td><span class="none">—</span></td></tr>
+              <tr class="hit"><td><i>Inferno</i></td><td class="num loss">9–13 <small>{{loss}}</small></td><td><span class="flag">4 {{rounds}}</span></td></tr>
+              <tr class="hit"><td><i>Train</i></td><td class="num win">13–10 <small>{{win}}</small></td><td><span class="flag">1 {{round}}</span></td></tr>
+              <tr><td><i>Ancient</i></td><td class="num loss">7–13 <small>{{loss}}</small></td><td><span class="none">—</span></td></tr>
+            </tbody>
+          </table>
+          <figcaption class="board__coach">
+            <img src="/assets/gamewise-emblem.webp" alt="" width="32" height="32">
+            <p>{{board_coach}}</p>
+          </figcaption>
+          <span class="example">{{example}}</span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Credibilidad ===== -->
+    <div class="proof">
+      <div class="wrap proof__inner">
+        <p class="proof__award"><svg aria-hidden="true"><use href="#i-trophy"/></svg><b>{{proof_award}}</b> <span>{{proof_award_detail}}</span></p>
+        <p class="proof__sources">{{proof_sources}} <b>Steam</b><span aria-hidden="true">·</span><b>FACEIT</b><span aria-hidden="true">·</span><b>Leetify</b></p>
+      </div>
+    </div>
+
+    <!-- ===== Problema ===== -->
+    <section class="section problem" aria-labelledby="problema-titulo">
+      <div class="wrap problem__grid">
+        <div>
+          <h2 id="problema-titulo">{{problem_title}}</h2>
+          <ul class="pains">
+            <li><b>{{pain1_title}}</b> {{pain1_text}}</li>
+            <li><b>{{pain2_title}}</b> {{pain2_text}}</li>
+            <li><b>{{pain3_title}}</b> {{pain3_text}}</li>
+          </ul>
+        </div>
+        <figure class="stats" aria-label="{{stats_aria}}">
+          <div class="stats__head"><p class="label">{{stats_label}}</p><span class="example">{{example}}</span></div>
+          <dl class="stats__grid">
+            <div><dt>K/D</dt><dd class="num">{{stat_kd_v}}</dd></div>
+            <div><dt>ADR</dt><dd class="num">{{stat_adr_v}}</dd></div>
+            <div><dt>HS %</dt><dd class="num">47</dd></div>
+            <div><dt>KAST</dt><dd class="num">{{stat_kast_v}}</dd></div>
+            <div><dt>{{stat_entry}}</dt><dd class="num">4 / 9</dd></div>
+            <div><dt>{{stat_util}}</dt><dd class="num">112</dd></div>
+            <div><dt>{{stat_flash}}</dt><dd class="num">3</dd></div>
+            <div><dt>{{stat_clutch}}</dt><dd class="num">1 / 5</dd></div>
+          </dl>
+          <p class="stats__question">{{stats_question}} <span class="num">—</span></p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Ciclo de mejora ===== -->
+    <section class="section" id="como-funciona" aria-labelledby="ciclo-titulo">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="ciclo-titulo">{{loop_title}}</h2>
+          <p class="lead">{{loop_lead}}</p>
+        </div>
+        <!-- El orden importa: es un ciclo, por eso los pasos van numerados -->
+        <ol class="loop">
+          <li><span class="num">01</span><h3>{{loop1_t}}</h3><p>{{loop1_d}}</p></li>
+          <li><span class="num">02</span><h3>{{loop2_t}}</h3><p>{{loop2_d}}</p></li>
+          <li><span class="num">03</span><h3>{{loop3_t}}</h3><p>{{loop3_d}}</p></li>
+          <li><span class="num">04</span><h3>{{loop4_t}}</h3><p>{{loop4_d}}</p></li>
+          <li><span class="num">05</span><h3>{{loop5_t}}</h3><p>{{loop5_d}}</p></li>
+          <li class="loop__last"><span class="num">06</span><h3>{{loop6_t}}</h3><p>{{loop6_d}}</p></li>
+        </ol>
+        <p class="loop-note"><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>{{loop_note_b}}</b> {{loop_note}}</span></p>
+      </div>
+    </section>
+
+    <!-- ===== Qué te muestra ===== -->
+    <section class="section" id="que-te-muestra" aria-labelledby="muestra-titulo">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="muestra-titulo">{{show_title}}</h2>
+          <p class="lead">{{show_lead}}</p>
+        </div>
+
+        <div class="features">
+          <!-- 1. Evidencia -->
+          <article class="feature">
+            <div class="feature__text">
+              <h3>{{f1_title}}</h3>
+              <p>{{f1_text}}</p>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f1_b1}}</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f1_b2}}</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <div class="panel__head"><p class="label">{{f1_panel}}</p><span class="example">{{example}}</span></div>
+              <ul class="evidence">
+                <li><span class="num">R4</span><span>{{ev1}}<small><i>Mirage</i> · {{ev1_s}}</small></span><span class="pill pill--data">{{data}}</span></li>
+                <li><span class="num">R11</span><span>{{ev2}}<small><i>Inferno</i> · {{ev2_s}}</small></span><span class="pill pill--data">{{data}}</span></li>
+                <li><span class="num">R17</span><span>{{ev3}}<small><i>Ancient</i> · {{ev3_s}}</small></span><span class="pill pill--data">{{data}}</span></li>
+              </ul>
+              <p class="coach-read"><span class="pill pill--coach">{{coach}}</span>{{ev_coach}}</p>
+            </div>
+          </article>
+
+          <!-- 2. Memoria -->
+          <article class="feature">
+            <div class="feature__text">
+              <h3>{{f2_title}}</h3>
+              <p>{{f2_text}}</p>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f2_b1}}</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f2_b2}}</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <div class="panel__head"><p class="label">{{coach}}</p><span class="example">{{example}}</span></div>
+              <div class="chat">
+                <div class="msg msg--me"><p>{{chat_q}}</p></div>
+                <div class="msg"><img src="/assets/gamewise-emblem.webp" alt="" width="30" height="30"><p>{{chat_a1}}</p></div>
+                <span class="memory"><svg aria-hidden="true"><use href="#i-memory"/></svg>{{chat_memory}}</span>
+                <div class="msg"><img src="/assets/gamewise-emblem.webp" alt="" width="30" height="30"><p>{{chat_a2}}</p></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Plan -->
+          <article class="feature">
+            <div class="feature__text">
+              <h3>{{f3_title}}</h3>
+              <p>{{f3_text}}</p>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f3_b1}}</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f3_b2}}</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <div class="panel__head"><p class="label">{{f3_panel}}</p><span class="example">{{example}}</span></div>
+              <div class="task">
+                <p class="task__title">{{task_title}}</p>
+                <p class="task__text">{{task_text}}</p>
+                <small>{{task_small}}</small>
+              </div>
+              <ul class="drills">
+                <li><span>{{drill1}}</span><span class="num">15 min</span></li>
+                <li><span>{{drill2}}</span><span class="num">5 min</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. Progreso -->
+          <article class="feature">
+            <div class="feature__text">
+              <h3>{{f4_title}}</h3>
+              <p>{{f4_text}}</p>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f4_b1}}</li>
+                <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{f4_b2}}</li>
+              </ul>
+            </div>
+            <div class="panel" role="img" aria-label="{{f4_aria}}">
+              <div class="panel__head"><p class="label">{{f4_panel}}</p><span class="example">{{example}}</span></div>
+              <div class="progress-row">
+                <span class="num big">54 → 62<span class="up">+8</span></span>
+                <span class="ok-state"><svg aria-hidden="true"><use href="#i-check"/></svg>{{goal_reached}}</span>
+              </div>
+              <div class="chart" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                <div class="chart__goal"><em>{{goal}} 60</em></div>
+              </div>
+              <div class="chart-axis" aria-hidden="true"><span>{{match}} 1</span><span>{{match}} 10</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Diferencia ===== -->
+    <section class="section" aria-labelledby="dif-titulo">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="dif-titulo">{{diff_title}}</h2>
+        </div>
+        <div class="compare-wrap">
+          <table class="compare">
+            <thead>
+              <tr><th scope="col"><span class="sr-only">{{diff_col_aspect}}</span></th><th scope="col">{{diff_col_others}}</th><th scope="col" class="compare__us">GAMEWISE</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">{{diff_r1}}</th><td><svg aria-hidden="true"><use href="#i-minus"/></svg>{{diff_r1_o}}</td><td class="compare__us"><svg aria-hidden="true"><use href="#i-check"/></svg>{{diff_r1_g}}</td></tr>
+              <tr><th scope="row">{{diff_r2}}</th><td><svg aria-hidden="true"><use href="#i-minus"/></svg>{{diff_r2_o}}</td><td class="compare__us"><svg aria-hidden="true"><use href="#i-check"/></svg>{{diff_r2_g}}</td></tr>
+              <tr><th scope="row">{{diff_r3}}</th><td><svg aria-hidden="true"><use href="#i-minus"/></svg>{{diff_r3_o}}</td><td class="compare__us"><svg aria-hidden="true"><use href="#i-check"/></svg>{{diff_r3_g}}</td></tr>
+              <tr><th scope="row">{{diff_r4}}</th><td><svg aria-hidden="true"><use href="#i-minus"/></svg>{{diff_r4_o}}</td><td class="compare__us"><svg aria-hidden="true"><use href="#i-check"/></svg>{{diff_r4_g}}</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="quote-line">{{diff_quote}}</p>
+      </div>
+    </section>
+
+    <!-- ===== Planes ===== -->
+    <section class="section" id="planes" aria-labelledby="planes-titulo">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="planes-titulo">{{plans_title}}</h2>
+          <p class="lead">{{plans_lead}}</p>
+        </div>
+        <div class="plans">
+          <article class="plan plan--main">
+            <h3>{{plan_beta}}</h3>
+            <p class="plan__price"><b class="num">{{plan_free}}</b><span>{{plan_free_s}}</span></p>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{plan_b1}}</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{plan_b2}}</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{plan_b3}}</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg>{{plan_b4}}</li>
+            </ul>
+            <a class="btn btn--primary btn--lg" data-app data-cta="planes-probar" href="https://gamewise-frontend.vercel.app/login">
+              {{cta_try}}
+              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+          <article class="plan plan--soon">
+            <h3>{{plan_after}}</h3>
+            <p>{{plan_after_1}}</p>
+            <p>{{plan_after_2}}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Preguntas ===== -->
+    <section class="section" id="preguntas" aria-labelledby="faq-titulo">
+      <div class="wrap faq">
+        <h2 id="faq-titulo">{{faq_title}}</h2>
+        <div class="faq__list">
+          <details><summary>{{q1}}</summary><p>{{a1}}</p></details>
+          <details><summary>{{q2}}</summary><p>{{a2}}</p></details>
+          <details><summary>{{q3}}</summary><p>{{a3}}</p></details>
+          <details><summary>{{q4}}</summary><p>{{a4}}</p></details>
+          <details><summary>{{q5}}</summary><p>{{a5}}</p></details>
+          <details><summary>{{q6}}</summary><p>{{a6}}</p></details>
+          <details><summary>{{q7}}</summary><p>{{a7}}</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA final ===== -->
+    <section class="section final" aria-labelledby="final-titulo">
+      <div class="wrap">
+        <h2 id="final-titulo">{{final_title}}</h2>
+        <p class="lead">{{final_lead}}</p>
+        <div class="actions">
+          <a class="btn btn--primary btn--lg" data-app data-cta="final-probar" href="https://gamewise-frontend.vercel.app/login">
+            {{cta_try}}
+            <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pie ===== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div>
+          <a class="brand" href="/{{lang}}/" aria-label="{{brand_home}}">
+            <img src="/assets/gamewise-emblem.webp" alt="" width="36" height="36">
+            <span>GAMEWISE</span>
+          </a>
+          <p class="footer__tag">{{tagline}}</p>
+        </div>
+        <nav class="footer__links" aria-label="{{footer_nav}}">
+          <a href="#como-funciona">{{nav_how}}</a>
+          <a href="#planes">{{nav_plans}}</a>
+          <a href="#preguntas">{{nav_faq}}</a>
+          <a data-app href="https://gamewise-frontend.vercel.app/login">{{nav_login}}</a>
+        </nav>
+        <img class="footer__leetify" src="/assets/leetify-badge-dark.png" alt="Data provided by Leetify" width="150" height="64">
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> GAMEWISE · {{footer_company}}</p>
+        <p>{{footer_valve}}</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+  <!-- Vercel Web Analytics: solo funciona con Analytics activado en el proyecto -->
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
