@@ -18,7 +18,7 @@
   "nav_plans": "Planes",
   "nav_faq": "Preguntas",
   "nav_login": "Entrar",
-  "nav_try": "Probar gratis",
+  "nav_try": "Probá gratis",
   "lang_label": "Idioma",
   "hero_title": "No te quedes en el análisis. <span class=\"accent\">Mejorá.</span>",
   "hero_lead": "GAMEWISE es un coach de IA para Counter-Strike 2. Encuentra los errores que repetís partida tras partida, te muestra la evidencia y te demuestra con datos si estás mejorando.",
@@ -157,5 +157,11 @@
   "footer_valve": "GAMEWISE no está afiliado ni respaldado por Valve Corporation. Counter-Strike y Steam son marcas de Valve Corporation.",
   "stat_kd_v": "1,07",
   "stat_adr_v": "81,4",
-  "stat_kast_v": "69 %"
+  "stat_kast_v": "69 %",
+  "menu_open": "Abrir menú",
+  "menu_close": "Cerrar menú",
+  "shot_alt": "La app de GAMEWISE: pantalla de diagnóstico con tres objetivos propuestos por el coach, el valor actual y la meta de cada uno, y los patrones que frenan al jugador, marcados como dato o interpretación.",
+  "shot_caption": "La app real, en modo demo con datos de ejemplo.",
+  "final_note": "Gratis durante la beta · Sin tarjeta · Entrás con Steam",
+  "shot_bar": "Tu diagnóstico"
 }

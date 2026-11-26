@@ -36,7 +36,7 @@ cpSync('public', OUT, { recursive: true });
 const ICONS = {
   check: 'check', arrow: 'arrow-right', play: 'play', trophy: 'trophy', memory: 'clock-rotate-left',
   minus: 'minus', globe: 'globe', bullseye: 'bullseye', analysis: 'magnifying-glass-chart',
-  list: 'list-check', crosshairs: 'crosshairs', chart: 'chart-line', next: 'rotate-right', steam: 'steam',
+  list: 'list-check', crosshairs: 'crosshairs', chart: 'chart-line', next: 'rotate-right', steam: 'steam', bars: 'bars',
 };
 const iconSprite = [
   '  <svg class="sprite" width="0" height="0" aria-hidden="true">',
@@ -59,7 +59,7 @@ const jsV = assetVersion('public/main.js');
 const used = new Set();
 for (const lang of LANGS) {
   const langLinks = LANGS.map((l) => {
-    const current = l === lang ? ' aria-current="true"' : '';
+    const current = l === lang ? ' aria-current="page"' : '';
     return `        <a href="/${l}/" hreflang="${dicts[l].html_lang}" lang="${dicts[l].html_lang}" data-lang="${l}" title="${dicts[l].lang_name}"${current}>${dicts[l].lang_short}</a>`;
   }).join('\n');
 

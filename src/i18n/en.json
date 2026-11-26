@@ -157,5 +157,11 @@
   "footer_valve": "GAMEWISE is not affiliated with or endorsed by Valve Corporation. Counter-Strike and Steam are trademarks of Valve Corporation.",
   "stat_kd_v": "1.07",
   "stat_adr_v": "81.4",
-  "stat_kast_v": "69%"
+  "stat_kast_v": "69%",
+  "menu_open": "Open menu",
+  "menu_close": "Close menu",
+  "shot_alt": "The GAMEWISE app: diagnosis screen with three goals proposed by the coach, the current value and target for each, and the patterns holding the player back, labeled as data or interpretation.",
+  "shot_caption": "The real app, in demo mode with sample data. The app is in Spanish for now.",
+  "final_note": "Free during the beta · No credit card · Sign in with Steam",
+  "shot_bar": "Your diagnosis"
 }

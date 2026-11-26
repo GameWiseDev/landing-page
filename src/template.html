@@ -35,11 +35,12 @@
         <img src="/assets/gamewise-emblem.webp" alt="" width="36" height="36">
         <span>GAMEWISE</span>
       </a>
-      <nav class="nav" aria-label="{{nav_label}}">
+      <nav class="nav" id="nav-secciones" aria-label="{{nav_label}}">
         <a href="#como-funciona">{{nav_how}}</a>
         <a href="#que-te-muestra">{{nav_what}}</a>
         <a href="#planes">{{nav_plans}}</a>
         <a href="#preguntas">{{nav_faq}}</a>
+        <a class="btn btn--primary nav__cta" data-app data-cta="menu-probar" href="https://gamewise-frontend.vercel.app/login">{{cta_try}}</a>
       </nav>
       <div class="lang" role="group" aria-label="{{lang_label}}">
         <svg class="lang__icon" aria-hidden="true"><use href="#i-globe"/></svg>
@@ -48,8 +49,11 @@
       <div class="topbar__cta">
         <!-- Los enlaces con data-app toman la dirección de APP_URL en main.js -->
         <a class="btn btn--secondary btn--sm topbar__login" data-app data-cta="nav-entrar" href="https://gamewise-frontend.vercel.app/login">{{nav_login}}</a>
-        <a class="btn btn--primary btn--sm" data-app data-cta="nav-probar" href="https://gamewise-frontend.vercel.app/login">{{nav_try}}</a>
+        <a class="btn btn--primary btn--sm topbar__try" data-app data-cta="nav-probar" href="https://gamewise-frontend.vercel.app/login">{{nav_try}}</a>
       </div>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-secciones" aria-label="{{menu_open}}" data-label-open="{{menu_open}}" data-label-close="{{menu_close}}">
+        <svg aria-hidden="true" width="18" height="18"><use href="#i-bars"/></svg>
+      </button>
     </div>
   </header>
 
@@ -179,6 +183,12 @@
           <p class="lead">{{show_lead}}</p>
         </div>
 
+        <figure class="shot">
+          <div class="shot__bar" aria-hidden="true"><span></span><span></span><span></span><b>gamewise · {{shot_bar}}</b></div>
+          <img src="/assets/app-diagnostico.webp" srcset="/assets/app-diagnostico-1x.webp 1040w, /assets/app-diagnostico.webp 2080w" sizes="(max-width: 1000px) 92vw, 920px" width="2080" height="1800" loading="lazy" decoding="async" alt="{{shot_alt}}">
+          <figcaption>{{shot_caption}}</figcaption>
+        </figure>
+
         <div class="features">
           <!-- 1. Evidencia -->
           <article class="feature">
@@ -253,6 +263,12 @@
               <div class="chart-axis" aria-hidden="true"><span>{{match}} 1</span><span>{{match}} 10</span></div>
             </div>
           </article>
+        </div>
+        <div class="section__cta">
+          <a class="btn btn--primary btn--lg" data-app data-cta="muestra-probar" href="https://gamewise-frontend.vercel.app/login">
+            {{cta_try}}
+            <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -338,6 +354,7 @@
             <svg aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>
+        <p class="final__note">{{final_note}}</p>
       </div>
     </section>
   </main>
@@ -355,6 +372,7 @@
         </div>
         <nav class="footer__links" aria-label="{{footer_nav}}">
           <a href="#como-funciona">{{nav_how}}</a>
+          <a href="#que-te-muestra">{{nav_what}}</a>
           <a href="#planes">{{nav_plans}}</a>
           <a href="#preguntas">{{nav_faq}}</a>
           <a data-app href="https://gamewise-frontend.vercel.app/login">{{nav_login}}</a>
@@ -369,7 +387,5 @@
   </footer>
 
   <script src="/main.js" defer></script>
-  <!-- Vercel Web Analytics: solo funciona con Analytics activado en el proyecto -->
-  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
